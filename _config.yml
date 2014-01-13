@@ -1,0 +1,6 @@
+name:      Dan Chao | dchao.co
+url:       http://dchao.co
+markdown:  redcarpet
+pygments:  true
+permalink: pretty
+paginate:  8
