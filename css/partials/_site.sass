@@ -1,7 +1,7 @@
 html
   background-color: $darkBlue
   color: $paleGrey
-  font-family: "Open Sans"
+  font-family: "Open Sans", helvetica, sans-serif
 
 body
   font-weight: 200
@@ -41,8 +41,20 @@ strong
   font-weight: 600
 
 .container
-  width: 38em
-  margin: 1em 6em
+  width: 100%
+  position: relative
+  max-width: 38em
+  padding: 1em 6em
+
+@media (max-width: 768px)
+  .container
+    padding: 1em
+    margin: auto
+
+@media (max-width: 610px)
+  .container
+    padding: 0
+
 
 h1
   font-size: 1.6em

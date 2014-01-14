@@ -4,6 +4,8 @@ title: How Angular handles named parameters, and how you can too
 date: 2013-12-15 14:29:00
 ---
 
+TL;DR: call `toString()` on the arguments array to figure out what their names are.
+
 The latest sprint we did at Hack Reactor was on [AngularJS](http://angularjs.org/). For the uninitiated, this is a relatively new framework introduced by the folks at Google, which has been gaining immense amounts of traction. Angular approaches JavaScript and DOM manipulation at such a different angle that it seems to break your fundamental understanding of JavaScript the first time you learn it. People start to throw around the word "magic", and something called the "Angular World" because it seems so far removed from traditional, vanilla JavaScript.
 
 The thing about Angular (as is with anything), is that there really isn't any voodoo behind it, and once you understand concepts of a certain mechanic, it's no longer magical. In this post, I'm going to take apart how Angular handles named parameters and dependency injection, and how you can do it too in your own program.
