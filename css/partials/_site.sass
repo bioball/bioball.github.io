@@ -4,6 +4,19 @@ html
   font-family: "Open Sans"
 
 body
+  font-weight: 200
+
+blockquote p
+  margin: 2em 0
+  padding-left: 2em
+  border-left: 0.3em solid #2e333b
+  font-size: 0.9em
+
+blockquote
+  margin: 0
+
+p, ul, ol
+  line-height: 1.6em
 
 a
   color: $lightBlue
@@ -13,18 +26,24 @@ a
   &:visited
     color: $lightBlue
 
-p
-  font-weight: 300
+strong
+  color: white
+  font-weight: 600
 
 .container
   width: 38em
-  margin: 1em
-
-.blog-date
-  color: $lightGrey
-  font-size: 0.7em
-  font-weight: 200
+  margin: 1em 6em
 
 h1
-  font-size: 1.9em
+  font-size: 1.6em
+
+h1, h2, h3, h4, h5, h6
   font-weight: 600
+
+hr
+  border: 0
+  width: 10em
+  border-top: 0.2em solid #2e333b
+  height: 0.2em
+  margin-top: 2.5em
+  margin-bottom: 2.5em
