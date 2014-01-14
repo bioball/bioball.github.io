@@ -12,7 +12,7 @@ The thing about Angular (as is with anything), is that there really isn't any vo
 
 ### What are named parameters?
 
-One of Angular's core concepts is that when you want to use a certian component (called services), you need to pass a specific **variable name** in your anonymous function argument. For example, if I were to write a controller and wanted to make AJAX calls, I **need** to use `$http` as an argument.[*](/#note)
+One of Angular's core concepts is that when you want to use a certian component (called services), you need to pass a specific **variable name** in your anonymous function argument. For example, if I were to write a controller and wanted to make AJAX calls, I **need** to use `$http` as an argument.[*](#note)
 
 {% highlight javascript %}
 angular.module('foo')
@@ -145,4 +145,4 @@ That's it! There's no magic here, just plain ol' JavaScript.
 
 > Further reading: [The "Magic" behind AngularJS Dependency Injection](http://www.alexrothenberg.com/2013/02/11/the-magic-behind-angularjs-dependency-injection.html)
 
-<small name="note">*Angular also allows dependency injection without named parameters with the use of arrays.</small>
+<small><a name="note" class="not-link">*Angular also allows dependency injection without named parameters with the use of arrays.</a></small>
