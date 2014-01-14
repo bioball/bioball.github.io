@@ -165,7 +165,12 @@ p, ul, ol {
 
 a {
   color: #3caff1;
-  text-decoration: none; }
+  text-decoration: none;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
   a:hover {
     color: #b5dcf2; }
   a:visited {
@@ -204,6 +209,8 @@ hr {
 
 pre {
   margin: 0; }
+  pre code {
+    padding: 0; }
 
 code {
   font-family: "Source Code Pro";
@@ -235,12 +242,13 @@ header {
 nav {
   position: relative;
   bottom: 0.7em; }
-  nav a {
+
+.header-link {
+  color: #a3a3a3 !important; }
+  .header-link:hover {
+    color: #3caff1 !important; }
+  .header-link:visited {
     color: #a3a3a3 !important; }
-    nav a:hover {
-      color: #3caff1 !important; }
-    nav a:visited {
-      color: #a3a3a3 !important; }
 
 .blog-date {
   color: #a3a3a3;
