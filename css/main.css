@@ -251,7 +251,7 @@ header {
   .logo a {
     color: white; }
     .logo a:hover {
-      color: #3caff1; }
+      color: #b5dcf2; }
 
 nav {
   position: relative;
@@ -268,7 +268,7 @@ nav {
   .header-link:visited {
     color: #a3a3a3; }
   .header-link:hover {
-    color: #3caff1; }
+    color: #b5dcf2; }
 
 .blog-date {
   color: #a3a3a3;
