@@ -28,10 +28,6 @@ Tying this into my first point, I find myself wanting to split one single page u
 
 It's actually possible to target a div when you create a Famous context (as of right now). When Famo.us eventually gets released, I think the biggest use case for it will be to render a Famo.us context just within a div, and have the rest of the web application be controlled by Backbone, Angular, Rails, or whatever other framework you may be using. Using Famo.us to render your entire application is simply too great a shift for most people to be comfortable with.
 
-### 4. Don't expect to understand Famo.us by drawing comparisons to an existing web library/framework.
-
-The engineers at Famo.us have modeled their framework after videogame frameworks. They adopt almost no conventions that were introduced by Backbone, Angular, d3, jQuery, Rails, etc, and you will just confuse yourself if you approach Famo.us by trying to compare to any of the above that I mentioned.
-
 ---
 
 I'll share a bit about the application I'm building once I've made some more progress with it, and have the chance to polish it up.
