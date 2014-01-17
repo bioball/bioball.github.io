@@ -14,17 +14,17 @@ In a nutshell, famo.us gives you the ability to create objects with various phys
 
 Here are a couple of takeaways that I've gathered so far. Take these with a certain grain of salt, since it's only my third day working with the framework.
 
-### 1. Famo.us is a framework, but not an MVC framework
+#### 1. Famo.us is a framework, but not an MVC framework
 
 I've been spending a good portion of the last three days trying to figure out how to best modularize my application, but it's still not immediately clear to me. I've gone through a lot of demos in Famo.us's private repositories, but none of them use any clear modular app structure. You are able to render different "pages" in famous, but they don't use any routes, and logic/data are so closely intertwined that it's hard to split them apart.
 
-### 2. Famo.us is extremely verbose. Too much to my liking
+#### 2. Famo.us is extremely verbose. Too much to my liking
 
 Yesterday night I wrote a short application that rendered two circles and a box, connected by springs. It was 123 lines long. There are so many modules that go into their environment that even things that seems simple conceptually take a lot of lines to write. Some modules are closely intertwined with each other, so in my opinion, it would make sense for Famo.us to just combine them.
 
 Tying this into my first point, I find myself wanting to split one single page up into multiple files, simply because they tend to be *so* verbose.
 
-### 3. You can create a Famo.us context for just one section of your website
+#### 3. You can create a Famo.us context for just one section of your website
 
 It's actually possible to target a div when you create a Famous context (as of right now). When Famo.us eventually gets released, I think the biggest use case for it will be to render a Famo.us context just within a div, and have the rest of the web application be controlled by Backbone, Angular, Rails, or whatever other framework you may be using. Using Famo.us to render your entire application is simply too great a shift for most people to be comfortable with.
 
