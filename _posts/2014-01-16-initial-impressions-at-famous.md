@@ -8,7 +8,7 @@ Recently, I've had the amazing opportunity to work at the [Famo.us](http://famo.
 
 Famo.us is a new JavaScript framework that may just fundamentally change how we write JavaScript for mobile and web. It is roughly 3.47 paradigm shifts away from traditional JavaScript frameworks, and doesn't follow *any* conventions that were previously laid down.
 
-In a nutshell, famo.us gives you the ability to create objects with various physics/properties. Famo.us injects a heap of divs onto the page, and tells the browser exactly where to position each of these divs using a matrix3d CSS property that it has already calculated. All of the hard word of animation is offloaded to the CPU/GPU, leading to extremely smooth animations.
+In a nutshell, famo.us gives you the ability to create objects with various physics/properties. Famo.us injects a heap of divs onto the page, and tells the browser exactly where to position each of these divs using a matrix3d CSS property that it has already calculated. All matrix calculation is offloaded to the GPU, leading to extremely smooth animations.
 
 ---
 
