@@ -280,6 +280,9 @@ nav {
   margin-bottom: 0;
   font-family: "Source Sans Pro"; }
 
+.post img {
+  max-width: 100%; }
+
 .posts {
   list-style-type: none;
   margin: 0;

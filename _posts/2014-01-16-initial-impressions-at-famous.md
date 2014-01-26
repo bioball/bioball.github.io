@@ -3,6 +3,7 @@ layout: post
 title: Initial impressions at famo.us
 date: 2014-01-16 08:00:00
 ---
+![Typical day at Famo.us](/assets/famous.png)
 
 Recently, I've had the amazing opportunity to work at the [Famo.us](http://famo.us/) headquarters to take part of their private beta program. It's been a thrill so far, and every day has been both an absolute struggle and joy.
 
