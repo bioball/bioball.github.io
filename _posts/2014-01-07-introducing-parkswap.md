@@ -24,12 +24,12 @@ We still have some work to do if we expect this to be a legitimate consumer app.
 
 ###Screenshots
 
-<a href="/assets/parkswap-login.png"><img src="/assets/parkswap-login.png" height="30%" width="30%"></img></a>
-<a href="/assets/parkswap-main.png"><img src="/assets/parkswap-main.png" height="30%" width="30%"></img></a>
-<a href="/assets/parkswap-where.png"><img src="/assets/parkswap-where.png" height="30%" width="30%"></img></a>
-<a href="/assets/parkswap-wait.png"><img src="/assets/parkswap-wait.png" height="30%" width="30%"></img></a>
-<a href="/assets/parkswap-list.png"><img src="/assets/parkswap-list.png" height="30%" width="30%"></img></a>
-<a href="/assets/parkswap-pickup.png"><img src="/assets/parkswap-pickup.png" height="30%" width="30%"></img></a>
+<a href="/assets/parkswap-login.png"><img src="/assets/parkswap-login.png" height="32%" width="32%"></img></a>
+<a href="/assets/parkswap-main.png"><img src="/assets/parkswap-main.png" height="32%" width="32%"></img></a>
+<a href="/assets/parkswap-where.png"><img src="/assets/parkswap-where.png" height="32%" width="32%"></img></a>
+<a href="/assets/parkswap-wait.png"><img src="/assets/parkswap-wait.png" height="32%" width="32%"></img></a>
+<a href="/assets/parkswap-list.png"><img src="/assets/parkswap-list.png" height="32%" width="32%"></img></a>
+<a href="/assets/parkswap-pickup.png"><img src="/assets/parkswap-pickup.png" height="32%" width="32%"></img></a>
 
 ---
 
