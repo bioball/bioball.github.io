@@ -4,7 +4,7 @@ title: Introducing ParkSwap!
 date: 2014-01-07 11:13:00
 ---
 
-Over a period of 2.5 weeks around late December/early January, I worked with a team of two other people to write [ParkSwap](http://park-swap.herokuapp.com/), a mobile web app to help people find parking spots.
+Over a period of 2.5 weeks around late December/early January, I worked with a team of two other people to write [ParkSwap](http://parkswap.co/), a mobile web app to help people find parking spots.
 
 The idea is this. In any busy city, people spend way too much time driving around finding parking spots. At the same time, people spend way too much time walking to their car which was parking far away. If you are trying to park, this app helps you to find people who are on their way to their car. You pick them up, give them a ride to their spot and take it after they leave. If you've parked far away, you get a free ride to your car.
 
