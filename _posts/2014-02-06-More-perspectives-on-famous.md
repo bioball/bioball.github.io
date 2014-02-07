@@ -61,7 +61,9 @@ With all this said, should you disregard famo.us? **Hell no**. If your goal is t
 
 ----
 
-So what did my team and I build during our time there? Click below to play! I'd love to hear any comments you may have on the comments section of our video.
+So what did my team and I build during our time there? Click below to play! I'd love to hear any comments you may have on the comments section of our video. 
+
+<small>(yep, that's my voice)</small>
 
 
 
