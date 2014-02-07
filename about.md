@@ -3,8 +3,8 @@ layout: default
 title: about Dan Chao
 ---
 
-about Dan Chao (赵浩洋)
-======================
+about Dan Chao
+==============
 
 Hi there. Welcome to the inside of my mind, where my ramblings are manifested digitally.
 
