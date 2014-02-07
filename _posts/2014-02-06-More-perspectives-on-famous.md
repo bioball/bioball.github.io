@@ -40,7 +40,7 @@ What is famo.us? There seems to be quite a bit of confusion on the web about thi
 
   Certain things that are trivial in a normal web page are inexplicably difficult on famo.us. For one, we wanted to render divs that resized based on the amount of text content inside them. The problem was, all Famo.us elments need a specific height and width property, otherwise they wouldn't be rendered properly. We had no way of know how many lines a piece of text would take up, so we didn't have any way to pre-determine the correct height and width values. In a regular website, this would have been completely trivial.
 
-  Another factor is that their API for their various components aren't completely thought out and only cover a limited use-case. For example, we used a widget called a scrollview to render a card-like layout in our app. We wanted to apply Matrix transformations to cards depending on their position in the scrollview, but there was no interface for it. I ended up hacking up their scrollview to get the kind of response that I needed from it. This is just one of many hacks that we built in order to get things to work.
+  Another factor is that their API for their various components aren't completely thought out and only cover a limited use-case. For example, we used a widget called a scrollview to render a card-like layout in our app. We wanted to apply matrix transformations to cards depending on their position in the scrollview, but there was no interface for it. I ended up hacking up their scrollview to get the kind of response that I needed from it. This is just one of many hacks that we built in order to get things to work.
 
 ---
 
