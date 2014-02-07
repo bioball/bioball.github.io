@@ -4,7 +4,7 @@ title: Two inane, but totally legitimate ways to write JavaScript
 date: 2014-02-07
 ---
 
-Don't use any of these unless you want to be punched by your co-workers/code contributors.
+Disclaimer: don't use any of these unless you want to be punched by your co-workers/code contributors.
 
 ####1. Use a `for` loop without a body
 
