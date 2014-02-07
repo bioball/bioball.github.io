@@ -8,7 +8,7 @@ Don't use any of these unless you want to be punched by your co-workers/code con
 
 ####1. Use a `for` loop without a body
 
-`for` loops take three expressions--the initial condition, ending condition, and an expression to evaluate at the end of each iteration. You can actually not put anything in the curly braces entirely just by passing in a self invoking function as the third expression in a for loop. Since you have a code block at your disposal, you can do anything here that you would normally do inside the `for` loop body.
+`for` loops take three expressions; the initial condition, ending condition, and an expression to evaluate at the end of each iteration. You can actually not put anything in the curly braces entirely just by passing in a self invoking function as the third expression in a for loop. Since you have a code block at your disposal, you can do anything here that you would normally do inside the `for` loop body.
 
 {% highlight javascript %}
 var arr = [1,2,3,4];
