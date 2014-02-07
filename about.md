@@ -6,10 +6,10 @@ title: about Dan Chao
 about Dan Chao (赵浩洋)
 ======================
 
-Hi there! I am a software engineer who specializes in full-stack web development. I mainly write in JavaScript, although I do a fair amount of work in Ruby as well. My main areas of focus are on Backbone, Angular, Node, Express, Rails and Sinatra.
+Hi there. Welcome to the inside of my mind, where my ramblings are manifested digitally.
 
-I am currently attending [Hack Reactor](http://www.hackreactor.com), an intensive coding school for web development, and am also participating in [Famo.us](http://famo.us) private beta program, where I am contributing to the development of their revolutionary pre-release framework.
+I am a musician disguised as a software engineer. I find great value in expressing myself through code, and building products that influence people. With that said, I work mainly in JavaScript in the web development sector, with copious bits of Ruby thrown in. I am an Angularist, Backbonite, CSS/SASSer, Expressist, Noder, Ruby on Railser, Sinatralite, and am among the first people to be a Famo.user. I also just made up all of those adjectives.
 
-In my spare time, I am a musician. I used to teach guitar and music theory professionally, and before that was a guitar performance major in college. I also play saxophone and piano.
+I reside in San Francsico, and you're likely to find me hanging around coffee shops, maybe writing this next blog post.
 
-Feel free to explore my twitter or github, or [email me](mailto:daniel.h.chao@gmail.com) if you'd like.
+[Contact me](mailto:daniel.h.chao@gmail.com)
