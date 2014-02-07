@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A perspective on famo.us from a guy that kinda still doesn't understand famo.us
+title: More perspectives on famo.us from a guy that kinda still doesn't understand famo.us
 date: 2014-02-06
 ---
 
