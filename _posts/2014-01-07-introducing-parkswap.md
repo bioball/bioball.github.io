@@ -4,11 +4,13 @@ title: Introducing ParkSwap!
 date: 2014-01-07 11:13:00
 ---
 
-Over a period of 2.5 weeks around late December/early January, I worked with a team of two other people to write [ParkSwap](http://parkswap.co/), a mobile web app to help people find parking spots.
+Imagine this. It's Friday night, and you're driving to *the* popular spot in town. There's cars parked everywhere on all the streets, and many more circling around blocks trying to look for one. You pull out your phone, and are immediately shown tons of parking spots near your current location. You choose one spot, and are given instructions to pick somebody up, then you drive them to their car to exchange parking spots with them.
 
-The idea is this. In any busy city, people spend way too much time driving around finding parking spots. At the same time, people spend way too much time walking to their car which was parking far away. If you are trying to park, this app helps you to find people who are on their way to their car. You pick them up, give them a ride to their spot and take it after they leave. If you've parked far away, you get a free ride to your car.
+Let's imagine that this app exists, and that everybody uses it. People suggest that 20% - 30% of all city traffic comes from people looking for parking spots<sup>[1](#note)</sup>. That's ridiculous. What if that were gone entirely? Time would be saved, there would be less pollution, and lots of money would be saved as well.
 
-Practically speaking, if you want a ride, all you do is select where your car is (we provide an Uber-style pin navigation), then wait for somebody to choose to take your parking spot. If you want to park, all you do is wait for the screen to populate with people looking for rides back to their parking spot. The app will show you a list of people currently within 1 mile radius of you, and will order all the parking spots by distance from you.
+That's the ambition that my team and I had, so we built that app. Let me introduce to you, **[ParkSwap](http://parkswap.co)**.
+
+If you are trying to get to your car, this is your free Uber-esque ride to your parking spot. If you are parking, this is your ticket to finding an extremely easy spot.
 
 ---
 
@@ -31,10 +33,14 @@ We still have some work to do if we expect this to be a legitimate consumer app.
 <a href="/assets/parkswap-list.png"><img src="/assets/parkswap-list.png" height="32%" width="32%"></img></a>
 <a href="/assets/parkswap-pickup.png"><img src="/assets/parkswap-pickup.png" height="32%" width="32%"></img></a>
 
----
-
 Please do check it out. If this thing becomes popular, it will save everybody a ton of time *and* money. Note that this is meant to be a mobile app, and was designed with a mobile portrait view in mind. If viewed from a widescreen browser, everything will be distorted.
 
 Our project is open source on [Github](http://github.com/bioball/parkswap/). Check out the readme for a more technical explanation of our app.
 
 Special shoutout to Emma Tzeng, who came up with the original idea for this app.
+
+---
+
+###Notes
+
+1. <a name="note" href="http://www.sfexaminer.com/sanfrancisco/san-francisco-transit-agency-says-drivers-seeking-parking-account-for-30-percent-of-traffic-but-data-questioned/Content?oid=2580026">http://www.sfexaminer.com/sanfrancisco/san-francisco-transit-agency-says-drivers-seeking-parking-account-for-30-percent-of-traffic-but-data-questioned/Content?oid=2580026</a>
