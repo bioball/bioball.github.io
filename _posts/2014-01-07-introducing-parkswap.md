@@ -4,13 +4,16 @@ title: Introducing ParkSwap!
 date: 2014-01-07 11:13:00
 ---
 
+> *If you are trying to get to your car, this is your free Uber-esque ride to your parking spot. 
+If you are parking, this is your ticket to finding an extremely easy spot.*
+
 Imagine this. It's Friday night, and you're driving to *the* popular spot in town. There's cars parked everywhere on all the streets, and many more circling around blocks trying to look for one. You pull out your phone, and are immediately shown tons of parking spots near your current location. You choose one spot, and are given instructions to pick somebody up, then you drive them to their car to exchange parking spots with them.
 
 Let's imagine that this app exists, and that everybody uses it. People suggest that 20% - 30% of all city traffic comes from people looking for parking spots<sup>[1](#note)</sup>. That's ridiculous. What if that were gone entirely? Time would be saved, there would be less pollution, and lots of money would be saved as well.
 
-That's the ambition that my team and I had, so we built that app. Let me introduce to you, **[ParkSwap](http://parkswap.co)**.
+That's the ambition that my team and I had, so we built that app. Let me introduce to you...
 
-If you are trying to get to your car, this is your free Uber-esque ride to your parking spot. If you are parking, this is your ticket to finding an extremely easy spot.
+<div style="text-align: center;"><a href="http://parkswap.co"><h2>ParkSwap</h2></a></div>
 
 ---
 
