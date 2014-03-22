@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Private variables in JavaScript pseudoclasses, and breaking out of each loops
+title: Private variables in JavaScript pseudoclasses, and breaking out of `each` loops
 date: 2014-03-21 14:29:00
 ---
 
 Here's two things that I don't very commonly see used in JavaScript applications, but may come in extremely useful.
 
-### Private variables
+## "Private variables" variables for pseudoclasses
 
 If you are writing a pseudoclass, and want to define private variables (in closure), you can do so, and reference them via getters and setters.
 {% highlight javascript %}
@@ -45,6 +45,9 @@ thing.get('bar');
 {% endhighlight %}
   </li>
   <li>
+It leads to a cleaner object, and you don't have to use underscores to mark a false limiter on what properties should not be touched.
+  </li>
+  <li>
 You can easily handle logic on change, by adding that code into the getter and setter functions.
 
 {% highlight javascript %}
@@ -68,7 +71,7 @@ So is doing this any better than just defining variables as properties of each i
 The getter and setter methods cannot be on the `.prototype` of `Foo`, because in order for these variables to remain private (in closure), the methods need a direct reference to `stuff`. 
 
 
-### Breaking out of `each` loops
+## Breaking out of `each` loops
 
 If you're using Array#forEach, or another utility function that repeatedly calls a callback, you can break out of it by throwing an error. This seems extremely hacky, but I think it's the only way to do it. In this example below, I simply create an object called `breaker`, and throw it to "break" out of my loop. Since my `forEach` is within a `try..catch` block, I can catch all errors and check to see if the error is my breaker.
 
