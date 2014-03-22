@@ -12,8 +12,8 @@ In a pseudoclassical instantiation pattern, it's quite common to see something l
 
 {% highlight javascript %}
 var Foo = function(){
-  this._bar = "bizzle";
-  this._baz = "drizzle";
+  this._bar = 'bizzle';
+  this._baz = 'drizzle';
 };
 
 Foo.prototype.doThing = function(){
@@ -26,8 +26,8 @@ Where, in this example, `this._bar` and `this._baz` have underscores to indicate
 {% highlight javascript %}
 var Foo = function(){
   var stuff = {
-    bar: "bizzle",
-    baz: "drizzle"
+    bar: 'bizzle',
+    baz: 'drizzle'
   };
   this.set = function(attr, value){
     stuff[attr] = value;
