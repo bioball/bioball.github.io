@@ -48,8 +48,7 @@ Note, the getter and setter methods cannot be on the `.prototype` of `Foo`, beca
 
 <ol>
   <li>
-You don't expose these variables as properties of the object. This means if your code is dependent on the value of this variable, it leads to code that is harder to break. If you really don't want somebody to touch these variables, then you can even not write a setter method.
-
+You don't expose these variables as properties of the object. It leads to a cleaner object, and you don't have to use underscores to mark a false limiter on what properties should not be touched.
 {% highlight javascript %}
 var thing = new Foo();
 thing.set('bar', 'bizmack');
@@ -67,9 +66,6 @@ thing.get('bar');
 {% endhighlight %}
   </li>
   <li>
-It leads to a cleaner object, and you don't have to use underscores to mark a false limiter on what properties should not be touched.
-  </li>
-  <li>
 You can easily handle logic on change, by adding that code into the getter and setter functions.
 
 {% highlight javascript %}
@@ -78,6 +74,8 @@ this.set = function(attr, value){
   event.emit('change', attr, value);
 }
 {% endhighlight %}
+
+If you don't want a variable to be touched outside of 
   </li>
 </ol>
 

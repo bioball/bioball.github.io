@@ -226,7 +226,8 @@ hr {
   -moz-border-radius: 0.4em;
   -ms-border-radius: 0.4em;
   -o-border-radius: 0.4em;
-  border-radius: 0.4em; }
+  border-radius: 0.4em;
+  line-height: 1em; }
 
 pre {
   margin: 0; }
