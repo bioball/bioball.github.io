@@ -66,7 +66,7 @@ thing.get('bar');
 {% endhighlight %}
   </li>
   <li>
-You can easily handle logic on change, by adding that code into the getter and setter functions.
+You can easily handle logic on change, by adding that code into the getter and setter functions. If integrating with an event system, it may look something like this.
 
 {% highlight javascript %}
 this.set = function(attr, value){
