@@ -8,10 +8,27 @@ Here's two things that I don't very commonly see used in JavaScript applications
 
 ## "Private variables" variables for pseudoclasses
 
-If you are writing a pseudoclass, and want to define private variables (in closure), you can do so, and reference them via getters and setters.
+In a pseudoclassical instantiation pattern, it's quite common to see something like this:
+
 {% highlight javascript %}
 var Foo = function(){
-  var stuff = {};
+  this._bar = "bizzle";
+  this._baz = "drizzle";
+};
+
+Foo.prototype.doThing = function(){
+  doStuffWith(this.bar);
+};
+{% endhighlight %}
+
+Where, in this example, `this._bar` and `this._baz` have underscores to indicate that they are supposed to be "private" variables and shouldn't be touched. This is janky, since these variables aren't actually private. I would suggest that there is another way to do it, via getter and setter functions, and storing variables in closure.
+
+{% highlight javascript %}
+var Foo = function(){
+  var stuff = {
+    bar: "bizzle",
+    baz: "drizzle"
+  };
   this.set = function(attr, value){
     stuff[attr] = value;
     return value;
@@ -20,18 +37,23 @@ var Foo = function(){
     return stuff[attr];
   };
 };
+
+Foo.prototype.doThing = function(){
+  doStuffWith(this.get('bar'));
+};
 {% endhighlight %}
 
+Note, the getter and setter methods cannot be on the `.prototype` of `Foo`, because in order for these variables to remain private (in closure), the methods need a direct reference to `stuff`. 
 #### Pros
 
 <ol>
   <li>
-You don't expose these variables as properties of the object. This means if your code is dependent on the value of this variable, it leads to code that is harder to break.
+You don't expose these variables as properties of the object. This means if your code is dependent on the value of this variable, it leads to code that is harder to break. If you really don't want somebody to touch these variables, then you can even not write a setter method.
 
 {% highlight javascript %}
 var thing = new Foo();
 thing.set('bar', 'bizmack');
-//=> "bizmack"
+// => "bizmack"
 
 // the "bar" variable is not accessibile outside of the getter and setter.
 console.log(thing.bar);
@@ -62,13 +84,9 @@ this.set = function(attr, value){
 
 #### Cons
 
-1. Every new instance of `Foo` comes with its own `get` and `set` functions.If I create 1000 objects with `new Foo()`, I also get 2000 extra functions. On a large scale, this can be expensive.
-
+1. Every new instance of `Foo` comes with its own `get` and `set` functions. If I create 1000 objects with `new Foo()`, I also get 2000 extra functions. On a large scale, this can be expensive.
 2. These variables aren't truly private, since the variables are still indirectly exposed via `get` and `set`.
-
 So is doing this any better than just defining variables as properties of each instance of the class? That's up to you to decide.
-
-The getter and setter methods cannot be on the `.prototype` of `Foo`, because in order for these variables to remain private (in closure), the methods need a direct reference to `stuff`. 
 
 
 ## Breaking out of `each` loops
