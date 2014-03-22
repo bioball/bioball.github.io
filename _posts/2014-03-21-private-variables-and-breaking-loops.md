@@ -4,7 +4,7 @@ title: Private variables in JavaScript pseudoclasses, and breaking out of `each`
 date: 2014-03-21 14:29:00
 ---
 
-Here's two things that I don't very commonly see used in JavaScript applications, but may come in extremely useful.
+Here are two things that I don't very commonly see used in JavaScript applications, but may come in extremely useful.
 
 ## "Private variables" variables for pseudoclasses
 
@@ -56,10 +56,10 @@ thing.set('bar', 'bizmack');
 // => "bizmack"
 
 // the "bar" variable is not accessibile outside of the getter and setter.
-console.log(thing.bar);
+thing.bar;
 // => undefined
 
-// Setting thing.bar to something else does not affect this variable.
+// Setting thing.bar to something else does not affect what's returned by the getter
 thing.bar = 'boulder';
 // => "boulder"
 thing.get('bar');
@@ -86,6 +86,7 @@ this.set = function(attr, value){
 
 1. Every new instance of `Foo` comes with its own `get` and `set` functions. If I create 1000 objects with `new Foo()`, I also get 2000 extra functions. On a large scale, this can be expensive.
 2. These variables aren't truly private, since the variables are still indirectly exposed via `get` and `set`.
+
 So is doing this any better than just defining variables as properties of each instance of the class? That's up to you to decide.
 
 
