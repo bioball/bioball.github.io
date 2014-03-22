@@ -74,8 +74,6 @@ this.set = function(attr, value){
   event.emit('change', attr, value);
 }
 {% endhighlight %}
-
-If you don't want a variable to be touched outside of 
   </li>
 </ol>
 
