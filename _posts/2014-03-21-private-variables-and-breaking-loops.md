@@ -17,7 +17,7 @@ var Foo = function(){
 };
 
 Foo.prototype.doThing = function(){
-  doStuffWith(this.bar);
+  doStuffWith(this._bar);
 };
 {% endhighlight %}
 
