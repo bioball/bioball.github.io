@@ -96,12 +96,12 @@ The usage of JWT's also allows the server to be entirely stateless. Since authen
 
 ## Detriments
 
-Although using JWTs means we are not vulnerable to CSRF, we are very susceptible to XSS attacks. Any malicious user that gains the ability to execute JavaScript on any of my pages means they will have easy access to all of our tokens. Since the tokens are self-authenticating, this can be disaterous if compromised. This means that any third party JavaScript library has to be scrutinized to make sure they aren't introducing XSS holes.
+Although using JWTs means we are not vulnerable to CSRF, we are very susceptible to XSS attacks. Any malicious user that gains the ability to execute JavaScript on any of my pages means they will have easy access to all of our tokens. Since the tokens are self-authenticating, this can be disaterous if compromised. This means that any third party JavaScript library has to be scrutinized to make sure they compromising your security.
 
-Another detriment to this is the fact that a single session can't be invalidated, unless you wanted to re-introduce state in the serve by specifically keeping track of a blacklist on token claims (like, say, a claim that the user's email is "bungo@baggins.com"). Common solutions that I've seen are to keep the expiration on these tokens quite low, and to configure clients to grab refresh tokens upon subsequent page views (Basically, a refresh token is just another JWT with a fresh expiration date).
+Another detriment to this is the fact that a single session can't be invalidated, unless you wanted to re-introduce state in the server by specifically keeping track of a blacklist on token claims (like, say, a claim that the user's email is "bungo@baggins.com"). Common solutions that I've seen are to keep the expiration on these tokens quite low, and to configure clients to grab refresh tokens upon subsequent page views (basically, a refresh token is just another JWT with a fresh expiration date).
 
 Last of all, relying on `localStorage` (or `sessionStorage`) to store these tokens in the client side has compatibility issues with older browsers that don't support HTML5, and there is no easy fallback if the browser doesn't support it.
 
 ---
 
-All in all, it has to be said that cookies are battle-tested and very well understood, whereas localStorage and JWT's are a relatively new concept. The conservative engineer is much more likely to stick with the cookie model of authentication. However, JWT's are a pretty intuitive solution and I'd love to see this mature.
+All in all, it has to be said that cookies are battle-tested and very well understood, whereas localStorage and JWT's are a relatively new concept. The conservative engineer is much more likely to stick with the cookie model of authentication. However, JWT's are a very intuitive solution and I'd love to see this mature.
