@@ -3,20 +3,31 @@ header
   word-spacing: 0.2em
   font-size: 1.1em
   font-weight: 600
+  margin-top: 1em
 
+.logo-container
+  border-bottom: 5px solid $lightPastelRed
+  box-sizing: border-box
 
+a .logo
+  color: #444
+  &:hover
+    color: $paleBlue
 .logo
-  font-weight: 700
-  font-family: "Source Sans Pro"
-  font-size: 5em
-  a
-    color: #fff
-    &:hover
-      color: $paleBlue
+  // font-weight: 700
+  // font-family: "Source Sans Pro"
+  // font-size: 5em
+  text-indent: -9999px
+  background-image: url("/assets/logo.png")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  width: 225px
+  height: 51px
 
 nav
-  position: relative
-  bottom: 0.7em
+  // position: relative
+  // bottom: 0.7em
   ul 
     list-style: none
     margin: 0

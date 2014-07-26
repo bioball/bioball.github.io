@@ -1,0 +1,21 @@
+{
+  "name": "bioball.github.io",
+  "version": "0.0.0",
+  "homepage": "http://dchao.co",
+  "authors": [
+    "Daniel Chao <daniel.h.chao@gmail.com>"
+  ],
+  "description": "Dan Chao's blog",
+  "keywords": [
+    "blog"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

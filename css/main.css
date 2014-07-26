@@ -153,11 +153,11 @@ table {
   font-weight: 400;
   font-style: normal; }
 html {
-  background-color: #22262d;
-  color: #e7e7e7;
   font-family: "Open Sans", helvetica, sans-serif; }
 
 body {
+  color: #444444;
+  background-color: white;
   font-weight: 200; }
 
 blockquote p {
@@ -201,7 +201,7 @@ strong {
   width: 100%;
   position: relative;
   max-width: 38em;
-  padding: 1em 6em; }
+  margin: 0 auto; }
 
 @media (max-width: 768px) {
   .container {
@@ -260,26 +260,33 @@ header {
   padding-bottom: 1em;
   word-spacing: 0.2em;
   font-size: 1.1em;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-top: 1em; }
+
+.logo-container {
+  border-bottom: 5px solid #ff8177;
+  box-sizing: border-box; }
+
+a .logo {
+  color: #444444; }
+  a .logo:hover {
+    color: #b5dcf2; }
 
 .logo {
-  font-weight: 700;
-  font-family: "Source Sans Pro";
-  font-size: 5em; }
-  .logo a {
-    color: white; }
-    .logo a:hover {
-      color: #b5dcf2; }
+  text-indent: -9999px;
+  background-image: url("/assets/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 225px;
+  height: 51px; }
 
-nav {
-  position: relative;
-  bottom: 0.7em; }
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    nav ul li {
-      display: inline; }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  nav ul li {
+    display: inline; }
 
 .header-link {
   color: #a3a3a3; }
