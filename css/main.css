@@ -144,22 +144,22 @@ table {
 
 @font-face {
   font-family: "Ayuthaya";
-  src: local("Ayuthaya"), url("/assets/Ayuthaya.ttf") format("ttf");
+  src: local("Ayuthaya"), url("/assets/fonts/Ayuthaya.ttf") format("ttf");
   font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: "Ayuthaya";
-  src: local("Ayuthaya"), url("/assets/Ayuthaya.woff") format("woff");
+  src: local("Ayuthaya"), url("/assets/fonts/Ayuthaya.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: "Tisa";
-  src: local("Tisa"), url("/assets/Tisa.ttf") format("ttf");
+  src: local("Tisa"), url("/assets/fonts/Tisa.ttf") format("ttf");
   font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: "Tisa";
-  src: local("Tisa"), url("/assets/Tisa.woff") format("woff");
+  src: local("Tisa"), url("/assets/fonts/Tisa.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 html {
