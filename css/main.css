@@ -285,6 +285,7 @@ hr {
 .post-listing {
   padding-top: 75px;
   margin-left: 435px;
+  min-height: 100%;
   position: relative; }
   .post-listing::before {
     position: absolute;
