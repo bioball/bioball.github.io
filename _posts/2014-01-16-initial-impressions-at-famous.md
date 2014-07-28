@@ -2,6 +2,7 @@
 layout: post
 title: Initial impressions at famo.us
 date: 2014-01-16 08:00:00
+image: /assets/famous.png
 ---
 ![Typical day at Famo.us](/assets/famous.png)
 

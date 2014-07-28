@@ -1,29 +1,46 @@
-header
-  padding-bottom: 1em
+.index-header
+  padding-bottom: 2em
   word-spacing: 0.2em
-  font-size: 1.1em
-  font-weight: 600
-  margin-top: 1em
+  // font-size: 1em
+  font-weight: normal
+  width: 300px
+  margin-left: 100px
+  float: left
+  height: 100%
+  color: white
+  font-family: "Tisa"
+  word-spacing: 0.1em
+  padding-top: $sitePaddingTop
 
-.logo-container
-  border-bottom: 5px solid $lightPastelRed
-  box-sizing: border-box
+.fauxcolumn
+  background-color: $lightPastelRed
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  width: 400px
+  z-index: -10
+  // border-right: 10px 
+  // +border-image(url("/assets/grey_@2X.png"))
+
+
+// .logo-container
+//   border-bottom: 5px solid $lightPastelRed
+//   box-sizing: border-box
 
 a .logo
-  color: #444
+  // color: #444
+  color: white
   &:hover
-    color: $paleBlue
+    color: lighten($lightPastelRed, 25%)
+
+// .logo-container
+  // text-align: center
+
 .logo
-  // font-weight: 700
-  // font-family: "Source Sans Pro"
-  // font-size: 5em
-  text-indent: -9999px
-  background-image: url("/assets/logo.png")
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center
-  width: 225px
-  height: 51px
+  line-height: 1
+  font-weight: normal
+  font-size: 3.3em
 
 nav
   // position: relative
@@ -32,12 +49,30 @@ nav
     list-style: none
     margin: 0
     padding: 0
-    li
-      display: inline
+    // li
+      // display: inline
 
 .header-link
-  color: #a3a3a3
+  // color: #a3a3a3
+  color: #fff
   &:visited
-    color: #a3a3a3
+    color: #fff
   &:hover
     color: $paleBlue
+
+.external-link::after
+  content: " \f08e"
+  font-family: "FontAwesome"
+  display: inline-block
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  font-weight: normal
+  font-style: normal
+  font-size: 0.8em
+  position: relative
+  left: 0.3em
+
+.description
+  a
+    color: white
+    border-bottom: 1px solid white

@@ -24,23 +24,23 @@ What is famo.us? There seems to be quite a bit of confusion on the web about thi
 
 1. **At the lowest level, famo.us is a matrix transformations library.**
 
-  The most primitive unit of action that famo.us does the output of a transformation matrix for rendering. I have not touched the GL or DirectX side of things, but as far as the traditional DOM goes, famo.us outputs a 4v4 matrix that gets interpreted by the browser as a `-webkit-transform: matrix3d` css property. Every single div is rendered with absolute positioning applied, and layout, size, animations, are all determined by matrices.
+    The most primitive unit of action that famo.us does the output of a transformation matrix for rendering. I have not touched the GL or DirectX side of things, but as far as the traditional DOM goes, famo.us outputs a 4v4 matrix that gets interpreted by the browser as a `-webkit-transform: matrix3d` css property. Every single div is rendered with absolute positioning applied, and layout, size, animations, are all determined by matrices.
 
-  Physics effects, animations, etc., are *secondary* to outputting matrix transformations. Realistically (and with great difficulty), somebody else can come along and write their own way to output matrix transformations and compete with famo.us.
+    Physics effects, animations, etc., are *secondary* to outputting matrix transformations. Realistically (and with great difficulty), somebody else can come along and write their own way to output matrix transformations and compete with famo.us.
 
 2. **Famo.us *still* delegates the hard work of div rendering to the browser.**
 
-  Steve Newcomb has said that famo.us skips the browser render and talks directly with the GPU. This is only half true. As long as we're talking about the DOM, the browser is still in charge of all rendering. This is obvious enough; just do a inspect element on [their website](http://famo.us/), remove the `-webkit-transform: matrix3d` property on their divs, and notice how they all float to the top left of the browser window.
+    Steve Newcomb has said that famo.us skips the browser render and talks directly with the GPU. This is only half true. As long as we're talking about the DOM, the browser is still in charge of all rendering. This is obvious enough; just do a inspect element on [their website](http://famo.us/), remove the `-webkit-transform: matrix3d` property on their divs, and notice how they all float to the top left of the browser window.
 
-  The browser is the final gateway between taking these divs and rendering them in the correct manner. Famo.us has simply built an abstraction layer to take advantage of the fact that these transformations are hardware accelerated.
+    The browser is the final gateway between taking these divs and rendering them in the correct manner. Famo.us has simply built an abstraction layer to take advantage of the fact that these transformations are hardware accelerated.
 
 3. **Famo.us is an immature framework, to a high degree.**
 
-  During just my three weeks there, they only just started talking about using version numbers on their modules to track dependency, changes and all that good stuff. They are currently in the process of determining what modules are ready to be shipped for public beta, and what is not ready yet.
+    During just my three weeks there, they only just started talking about using version numbers on their modules to track dependency, changes and all that good stuff. They are currently in the process of determining what modules are ready to be shipped for public beta, and what is not ready yet.
 
-  Certain things that are trivial in a normal web page are inexplicably difficult on famo.us. For one, we wanted to render divs that resized based on the amount of text content inside them. The problem was, all Famo.us elments need a specific height and width property, otherwise they wouldn't be rendered properly. We had no way of know how many lines a piece of text would take up, so we didn't have any way to pre-determine the correct height and width values. In a regular website, this would have been completely trivial.
+    Certain things that are trivial in a normal web page are inexplicably difficult on famo.us. For one, we wanted to render divs that resized based on the amount of text content inside them. The problem was, all Famo.us elments need a specific height and width property, otherwise they wouldn't be rendered properly. We had no way of know how many lines a piece of text would take up, so we didn't have any way to pre-determine the correct height and width values. In a regular website, this would have been completely trivial.
 
-  Another factor is that their API for their various components aren't completely thought out and only cover a limited use-case. For example, we used a widget called a scrollview to render a card-like layout in our app. We wanted to apply matrix transformations to cards depending on their position in the scrollview, but there was no interface for it. I ended up hacking up their scrollview to get the kind of response that I needed from it. This is just one of many hacks that we built in order to get things to work.
+    Another factor is that their API for their various components aren't completely thought out and only cover a limited use-case. For example, we used a widget called a scrollview to render a card-like layout in our app. We wanted to apply matrix transformations to cards depending on their position in the scrollview, but there was no interface for it. I ended up hacking up their scrollview to get the kind of response that I needed from it. This is just one of many hacks that we built in order to get things to work.
 
 ---
 

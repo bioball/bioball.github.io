@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-        <link href="assets/favicon.png" rel="shortcut icon" sizes="196x196">
-        <meta name="Description" CONTENT="Dan Chao's blog">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <link href="assets/favicon.png" rel="shortcut icon" sizes="196x196">
+    <meta name="viewport" content="width=device-width">
+    <meta name="Description" CONTENT="Dan Chao's blog">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-        <!-- <link rel="stylesheet" href="/assets/prism.css"> -->
+    {% include font_awesome.html %}
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+    <!-- <link rel="stylesheet" href="/assets/prism.css"> -->
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
 
-        <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
-        <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <![endif]-->
 
-    </head>
-    <body>
+  </head>
+  <body>
+    {% include header.html %}
+
+    <div class="post-listing">
       <div class="container">
-
-        {% include header.html %}
 
         <div class="site">
 
@@ -32,6 +34,7 @@
         </div>
           
       </div>
+    </div>
 
-    </body>
+  </body>
 </html>

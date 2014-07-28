@@ -6,3 +6,4 @@ paginate:  8
 links:
   - name:  About
     url:   /about
+# gems: [activesupport]

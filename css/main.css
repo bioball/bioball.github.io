@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
+@charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700,800");
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
@@ -152,13 +152,31 @@ table {
   src: local("Ayuthaya"), url("/assets/Ayuthaya.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
+@font-face {
+  font-family: "Tisa";
+  src: local("Tisa"), url("/assets/Tisa.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "Tisa";
+  src: local("Tisa"), url("/assets/Tisa.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
 html {
-  font-family: "Open Sans", helvetica, sans-serif; }
+  font-family: "Open Sans", helvetica, sans-serif;
+  width: 100%;
+  height: 100%; }
 
 body {
-  color: #444444;
-  background-color: white;
-  font-weight: 200; }
+  color: #555555;
+  font-weight: 400;
+  background-size: 8px;
+  width: 100%;
+  height: 100%; }
+  body:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 blockquote p {
   margin: 2em 0;
@@ -170,7 +188,10 @@ blockquote {
   margin: 0; }
 
 p, ul, ol {
-  line-height: 1.6em; }
+  line-height: 1.7em; }
+
+ol {
+  padding-left: 1.3em; }
 
 li {
   padding: 0 0 0.5em 0; }
@@ -178,15 +199,13 @@ li {
 a {
   color: #3caff1;
   text-decoration: none;
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
   transition: 0.5s; }
   a:visited {
     color: #3caff1; }
   a:hover {
-    color: #b5dcf2; }
+    color: #0f8bd1; }
 
 .not-link {
   color: #e7e7e7; }
@@ -194,14 +213,13 @@ a {
     color: #e7e7e7; }
 
 strong {
-  color: white;
   font-weight: 600; }
 
 .container {
-  width: 100%;
   position: relative;
-  max-width: 38em;
-  margin: 0 auto; }
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1em 5em; }
 
 @media (max-width: 768px) {
   .container {
@@ -210,26 +228,81 @@ strong {
 @media (max-width: 610px) {
   .container {
     padding: 0; } }
+a.index-blog-title-link {
+  color: #999999; }
+  a.index-blog-title-link:hover {
+    color: #444444; }
+
 h1 {
   font-size: 2em; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  margin-bottom: 0; }
+  margin-bottom: 0.5em; }
 
 p {
   margin-top: 0.2em; }
 
 hr {
   border: 0;
-  width: 10em;
-  border-top: 0.2em solid #2e333b;
-  height: 0.2em;
+  width: 100%;
+  border-top: 1px solid gainsboro;
+  height: 1px;
   margin-top: 2.5em;
-  margin-bottom: 2.5em; }
+  margin-bottom: 2.5em;
+  text-align: center; }
+  hr::after {
+    content: "•";
+    color: gainsboro;
+    padding: 0.3em;
+    display: inline-block;
+    position: relative;
+    top: -1em;
+    background-color: white;
+    font-size: 1.5em; }
+
+.blog-date-index {
+  width: 27px;
+  text-align: center;
+  margin-right: 1em;
+  margin-top: 0.4em;
+  float: left;
+  background-color: #efefef;
+  overflow: hidden; }
+
+.blog-date-month {
+  font-size: 0.5em;
+  padding-bottom: 0.2em;
+  line-height: 1.5;
+  background-color: #cdcdcd;
+  color: white; }
+
+.blog-date-day {
+  line-height: 1.8;
+  font-size: 0.8em;
+  font-weight: 400; }
+
+.index-blog-title {
+  overflow: hidden; }
+
+.post-li {
+  min-height: 50px; }
+
+.post-listing {
+  padding-top: 75px;
+  margin-left: 435px;
+  position: relative; }
+  .post-listing::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -35px;
+    width: 35px;
+    background-image: url("/assets/grey_@2X.png");
+    content: ""; }
 
 .highlight {
-  background-color: #1d2128;
+  background-color: #efefef;
   padding: 1em;
   -webkit-border-radius: 0.4em;
   -moz-border-radius: 0.4em;
@@ -237,7 +310,8 @@ hr {
   -o-border-radius: 0.4em;
   border-radius: 0.4em;
   line-height: 1.2em;
-  overflow: scroll; }
+  overflow: scroll;
+  margin: 1em; }
 
 pre {
   margin: 0; }
@@ -248,52 +322,73 @@ code {
   font-family: "Ayuthaya";
   font-size: 0.8em;
   font-weight: 400;
-  background-color: #1d2128;
-  padding: 0.4em 0.6em 0.3em 0.6em;
+  background-color: #efefef;
+  padding: 0.25em;
   -webkit-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
   -ms-border-radius: 0.3em;
   -o-border-radius: 0.3em;
   border-radius: 0.3em; }
 
-header {
-  padding-bottom: 1em;
+.index-header {
+  padding-bottom: 2em;
   word-spacing: 0.2em;
-  font-size: 1.1em;
-  font-weight: 600;
-  margin-top: 1em; }
+  font-weight: normal;
+  width: 300px;
+  margin-left: 100px;
+  float: left;
+  height: 100%;
+  color: white;
+  font-family: "Tisa";
+  word-spacing: 0.1em;
+  padding-top: 75px; }
 
-.logo-container {
-  border-bottom: 5px solid #ff8177;
-  box-sizing: border-box; }
+.fauxcolumn {
+  background-color: #ff8177;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  z-index: -10; }
 
 a .logo {
-  color: #444444; }
+  color: white; }
   a .logo:hover {
-    color: #b5dcf2; }
+    color: #fff7f7; }
 
 .logo {
-  text-indent: -9999px;
-  background-image: url("/assets/logo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 225px;
-  height: 51px; }
+  line-height: 1;
+  font-weight: normal;
+  font-size: 3.3em; }
 
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0; }
-  nav ul li {
-    display: inline; }
 
 .header-link {
-  color: #a3a3a3; }
+  color: white; }
   .header-link:visited {
-    color: #a3a3a3; }
+    color: white; }
   .header-link:hover {
     color: #b5dcf2; }
+
+.external-link::after {
+  content: " \f08e";
+  font-family: "FontAwesome";
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.8em;
+  position: relative;
+  left: 0.3em; }
+
+.description a {
+  color: white;
+  border-bottom: 1px solid white; }
 
 .blog-date {
   color: #a3a3a3;
@@ -301,12 +396,46 @@ nav ul {
   font-weight: 200;
   margin-bottom: 0.7em; }
 
-.blog-title {
+.blog-header {
+  height: 350px;
+  background-image: url("/assets/grey_@2X.png");
   margin-bottom: 0;
-  font-family: "Source Sans Pro"; }
+  font-size: 1.2em;
+  padding-bottom: 0;
+  width: 230px;
+  margin-left: 5%;
+  float: left; }
+
+.blog-title {
+  position: absolute;
+  font-size: 1.8em;
+  font-family: "Tisa";
+  color: #ff8177;
+  line-height: 1.1;
+  margin: 0 auto;
+  font-weight: normal;
+  bottom: 0;
+  padding: 0.5em 0; }
+
+.blog-title-container {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%; }
 
 .post img {
   max-width: 100%; }
+
+.post-container {
+  padding-top: 75px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden; }
+
+.image-scrim {
+  background-color: rgba(30, 30, 30, 0.8);
+  width: 100%;
+  height: 100%; }
 
 .posts {
   list-style-type: none;

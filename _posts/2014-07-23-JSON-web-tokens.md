@@ -88,7 +88,7 @@ Any request that I make to my server includes an `Authentication` http header, w
 
 JWT's make a lot of things that used to be tedious, suddenly extremely easy. For one, it isn't just a way to handle authentication, the token itself contains useful informaiton. For us, we add all public user information to the claims set, and our user model within the web app builds its schema from parsing this.
 
-Another pretty giant benefit is that because we're not using cookies, it's not possible for this token to be transfered upon page redirect, and we are absolutely not vulnerable to CSRF.
+Another pretty giant benefit is that because we're not using cookies, it's not possible for this token to be transfered upon page redirect, and we are absolutely not vulnerable to CSRF (Further reading: [cross-site-request-forgery](http://en.wikipedia.org/wiki/Cross-site_request_forgery)).
 
 JWT's also make single sign on between multiple web properties an absolute breeze to implement. Since the tokens are self-authenticating, as long as you pass the token around when the user navigates between the different sites, they will be considered logged in through the entire experience. In my sites, if a user is logged in, I append the token as a query parameter on any internal link.
 

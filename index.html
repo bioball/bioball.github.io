@@ -6,7 +6,22 @@ title: Dan Chao | @dhchao
 <div id="home">
   <ul class="posts">
     {% for post in site.posts %}
-      <li><div class="index-blog-title"><a href="{{ post.url }}">{{ post.title }}</a></div><div class="blog-date">{{ post.date | date_to_string }}</div></li>
+      <li class="post-li">
+<!--         <div class="blog-date blog-date-index">
+          <div class="blog-date-month">
+            {{ post.date | to_month }}
+          </div>
+          <div class="blog-date-day">
+            {{ post.date | to_day }}
+          </div>
+        </div> -->
+        <div class="index-blog-title">
+          <a href="{{ post.url }}" class="index-blog-title-link">{{ post.title }}</a>
+        </div>
+        <div class="blog-date">
+          {{ post.date | date_to_string }}
+        </div>
+      </li>
     {% endfor %}
   </ul>
 </div>

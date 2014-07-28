@@ -1,10 +1,15 @@
 html
   font-family: "Open Sans", helvetica, sans-serif
+  width: 100%
+  height: 100%
 
 body
-  color: #444
-  background-color: #fff
-  font-weight: 200
+  color: #555
+  font-weight: 400
+  background-size: 8px
+  width: 100%
+  height: 100%
+  +clearfix
 
 blockquote p
   margin: 2em 0
@@ -16,7 +21,11 @@ blockquote
   margin: 0
 
 p, ul, ol
-  line-height: 1.6em
+  line-height: 1.7em
+  // font-size: 1.1em
+
+ol
+  padding-left: 1.3em
 
 li
   padding: 0 0 0.5em 0
@@ -24,15 +33,11 @@ li
 a
   color: $lightBlue
   text-decoration: none
-  -o-transition: 0.5s
-  -ms-transition: 0.5s
-  -moz-transition: 0.5s
-  -webkit-transition: 0.5s
-  transition: 0.5s
+  +transition(0.5s)
   &:visited
     color: $lightBlue
   &:hover
-    color: $paleBlue
+    color: darken($lightBlue, 15%)
 
 .not-link
   color: $paleGrey
@@ -40,15 +45,17 @@ a
     color: $paleGrey
 
 strong
-  color: white
   font-weight: 600
 
 .container
-  width: 100%
+  // width: 100%
   position: relative
-  max-width: 38em
+  max-width: 650px
   // padding: 1em 6em
   margin: 0 auto
+  padding: 1em 5em
+  // box-shadow: 0 0 5px rgba(200, 200, 200, 0.7)
+  // background-color: #fff
 
 @media (max-width: 768px)
   .container
@@ -59,21 +66,82 @@ strong
   .container
     padding: 0
 
+a.index-blog-title-link
+  color: #999
+  &:hover
+    color: #444
+
 
 h1
   font-size: 2em
 
 h1, h2, h3, h4, h5, h6
   font-weight: 600
-  margin-bottom: 0
+  margin-bottom: 0.5em
 
 p
   margin-top: 0.2em
 
 hr
   border: 0
-  width: 10em
-  border-top: 0.2em solid #2e333b
-  height: 0.2em
+  // width: 10em
+  width: 100%
+  border-top: 1px solid #dcdcdc
+  // height: 0.2em
+  height: 1px
   margin-top: 2.5em
   margin-bottom: 2.5em
+  text-align: center
+  &::after
+    content: "•"
+    color: #dcdcdc
+    padding: 0.3em
+    display: inline-block
+    // margin-top: -1em
+    position: relative
+    top: -1em
+    background-color: white
+    font-size: 1.5em
+
+.blog-date-index
+  width: 27px
+  text-align: center
+  margin-right: 1em
+  margin-top: 0.4em
+  float: left
+  background-color: #efefef
+  overflow: hidden
+
+.blog-date-month
+  // border-bottom: 1px solid white
+  font-size: 0.5em
+  padding-bottom: 0.2em
+  line-height: 1.5
+  background-color: #cdcdcd
+  color: white
+
+.blog-date-day
+  line-height: 1.8
+  font-size: 0.8em
+  font-weight: 400
+
+.index-blog-title
+  overflow: hidden
+
+.post-li
+  min-height: 50px
+
+.post-listing
+  // float: left
+  padding-top: $sitePaddingTop
+  // overflow: hidden
+  margin-left: 435px
+  position: relative
+  &::before
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -35px
+    width: 35px
+    background-image: url("/assets/grey_@2X.png")
+    content: ""
