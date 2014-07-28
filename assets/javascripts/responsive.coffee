@@ -34,6 +34,7 @@ $( ->
 
     handleMove: (event) ->
       return if window.innerWidth >= 900
+      event.preventDefault()
       @el.css transform: "translate3d(#{ @currentPos + event.gesture.deltaX }px, 0, 0)"
 
     isOpen: ->
@@ -45,6 +46,4 @@ $( ->
   slider = new Slider $('body'), $('.hamburger')
   slider.init()
 
-  # $('.hamburger').on('click tap', -> slider.toggle() )
-  # new Hammer($('.hamburger')[0]).on('tap', -> slider.toggle())
 )

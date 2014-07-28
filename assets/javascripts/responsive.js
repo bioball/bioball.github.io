@@ -76,6 +76,7 @@
         if (window.innerWidth >= 900) {
           return;
         }
+        event.preventDefault();
         return this.el.css({
           transform: "translate3d(" + (this.currentPos + event.gesture.deltaX) + "px, 0, 0)"
         });
