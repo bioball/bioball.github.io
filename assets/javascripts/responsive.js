@@ -33,7 +33,7 @@
             return _this.handleStart(event);
           };
         })(this));
-        this.mcSlider.on('dragleft dragright swipeleft swiperight', (function(_this) {
+        this.mcSlider.on('dragleft dragright', (function(_this) {
           return function(event) {
             return _this.handleMove(event);
           };

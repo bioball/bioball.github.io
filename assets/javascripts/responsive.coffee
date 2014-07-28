@@ -17,7 +17,7 @@ $( ->
 
     init: ->
       @mcSlider.on 'dragstart touchstart', (event) => @handleStart(event)
-      @mcSlider.on 'dragleft dragright swipeleft swiperight', (event) => @handleMove(event)
+      @mcSlider.on 'dragleft dragright', (event) => @handleMove(event)
       @mcSlider.on 'release', (event) => @handleEnd(event)
       @mcButton.on 'tap', => @toggle()
 
