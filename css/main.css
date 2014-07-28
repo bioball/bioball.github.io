@@ -486,10 +486,18 @@ nav ul {
       background-color: #ffe0dd; }
 
   .index-header.active {
-    margin-left: -170px; }
+    -webkit-transform: translate3d(230px, 0, 0);
+    -moz-transform: translate3d(230px, 0, 0);
+    -ms-transform: translate3d(230px, 0, 0);
+    -o-transform: translate3d(230px, 0, 0);
+    transform: translate3d(230px, 0, 0); }
 
   .fauxcolumn.active {
-    left: -170px; }
+    -webkit-transform: translate3d(230px, 0, 0);
+    -moz-transform: translate3d(230px, 0, 0);
+    -ms-transform: translate3d(230px, 0, 0);
+    -o-transform: translate3d(230px, 0, 0);
+    transform: translate3d(230px, 0, 0); }
 
   .hamburger.active {
     background-color: #ff8177;
@@ -497,7 +505,11 @@ nav ul {
     color: white; }
 
   .post-listing.active {
-    margin-left: 265px; }
+    -webkit-transform: translate3d(230px, 0, 0);
+    -moz-transform: translate3d(230px, 0, 0);
+    -ms-transform: translate3d(230px, 0, 0);
+    -o-transform: translate3d(230px, 0, 0);
+    transform: translate3d(230px, 0, 0); }
 
   .blog-header {
     float: none;
