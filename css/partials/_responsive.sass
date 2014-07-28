@@ -27,26 +27,29 @@
     +transition(150ms ease-out)
     &:hover
       background-color: lighten($lightPastelRed, 20%)
-  // .container
-  //   padding: 1em
-    // margin: auto
   .index-header.active
-    // margin-left: -170px
     +transform(translate3d(230px, 0, 0))
   .fauxcolumn.active
-    // left: -170px
+    +transform(translate3d(230px, 0, 0))
+  .post-listing.active
     +transform(translate3d(230px, 0, 0))
   .hamburger.active
     background-color: $lightPastelRed
     border-color: $lightPastelRed
     color: #fff
-  .post-listing.active
-    // margin-left: 265px
-    +transform(translate3d(230px, 0, 0))
-
   .blog-header
     float: none
     width: 100%
     height: 300px
     margin: 0
     padding: 0 1em
+  body
+    +transition(300ms ease-out)
+    &.animate
+      transition: none
+    &.active
+      +transform(translate3d(230px, 0, 0))
+
+@media(min-width: 900px)
+  body
+    +transform(none !important)
