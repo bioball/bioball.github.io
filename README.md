@@ -2,6 +2,9 @@
 
 Welcome to the repo for my personal blog. Feel free to look around.
 
-This blog is designed by me, and was inspired by [Mu-An Chiou](https://github.com/muan/)'s blog. It runs off Jekyll, with no extensions.
+This blog is entirely designed by me, with design sources from:
 
-You may copy the design of my site, but you may not reuse my posts without my permission.
+* Muan Chiou's [blog](http://muan.co)
+* Elliot Jay Stocks' [blog](http://www.elliotjaystocks.com/)
+* [Font-Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [Subtle Patterns](http://subtlepatterns.com/)
