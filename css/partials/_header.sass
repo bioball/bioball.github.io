@@ -3,14 +3,21 @@
   word-spacing: 0.2em
   // font-size: 1em
   font-weight: normal
-  width: 300px
-  margin-left: 100px
+  width: 400px
+  padding-left: 100px
   float: left
   height: 100%
   color: white
   font-family: "Tisa"
   word-spacing: 0.1em
   padding-top: $sitePaddingTop
+  box-sizing: border-box
+  a
+    color: white
+    border-bottom: 1px solid white
+    +transition(150ms)
+    &:hover
+      border-bottom: 3px solid white
 
 .fauxcolumn
   background-color: $lightPastelRed
@@ -57,8 +64,8 @@ nav
   color: #fff
   &:visited
     color: #fff
-  &:hover
-    color: $paleBlue
+  // &:hover
+  //   color: $paleBlue
 
 .external-link::after
   content: " \f08e"
@@ -71,11 +78,3 @@ nav
   font-size: 0.8em
   position: relative
   left: 0.3em
-
-.description
-  a
-    color: white
-    border-bottom: 1px solid white
-    +transition(150ms)
-    &:hover
-      border-bottom: 3px solid white
