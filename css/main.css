@@ -191,11 +191,8 @@ blockquote {
 p, ul, ol {
   line-height: 1.7em; }
 
-ol {
-  padding-left: 1.3em; }
-
-li {
-  padding: 0 0 0.5em 0; }
+ol, ul {
+  padding-left: 3em; }
 
 a {
   color: #3caff1;
@@ -242,8 +239,7 @@ hr {
   width: 100%;
   border-top: 1px solid gainsboro;
   height: 1px;
-  margin-top: 2.5em;
-  margin-bottom: 2.5em;
+  margin: 5em 0;
   text-align: center; }
   hr::after {
     content: "•";
@@ -305,7 +301,7 @@ hr {
   -o-border-radius: 0.4em;
   border-radius: 0.4em;
   line-height: 1.2em;
-  overflow: scroll;
+  overflow: auto;
   margin: 1em; }
 
 pre {
