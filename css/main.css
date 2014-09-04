@@ -513,8 +513,7 @@ nav ul {
     float: none;
     width: 100%;
     height: 300px;
-    margin: 0;
-    padding: 0 1em; }
+    margin: 0; }
 
   body {
     -webkit-transition: 300ms ease-out;
