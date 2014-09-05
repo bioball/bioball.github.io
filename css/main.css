@@ -344,7 +344,7 @@ code {
       border-bottom: 3px solid white; }
 
 .fauxcolumn {
-  background-color: #ff8177;
+  background-color: #2484bb;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -355,7 +355,7 @@ code {
 a .logo {
   color: white; }
   a .logo:hover {
-    color: #fff7f7; }
+    color: #79bee5; }
 
 .logo {
   line-height: 1;
@@ -404,7 +404,7 @@ nav ul {
   position: absolute;
   font-size: 1.8em;
   font-family: "Tisa";
-  color: #ff8177;
+  color: #2484bb;
   line-height: 1.1;
   margin: 0 auto;
   font-weight: normal;
@@ -470,18 +470,18 @@ nav ul {
     display: block;
     padding: 0.2em 0.5em;
     border-radius: 4px;
-    border: 1px solid #ffe0dd;
+    border: 1px solid #64b4e1;
     display: inline-block;
     cursor: pointer;
     position: absolute;
     left: 14px;
     top: 14px;
-    color: #ff8177;
+    color: #2484bb;
     -webkit-transition: 150ms ease-out;
     -moz-transition: 150ms ease-out;
     transition: 150ms ease-out; }
     .hamburger:hover {
-      background-color: #ffe0dd; }
+      background-color: #64b4e1; }
 
   .index-header.active {
     -webkit-transform: translate3d(230px, 0, 0);
@@ -505,8 +505,8 @@ nav ul {
     transform: translate3d(230px, 0, 0); }
 
   .hamburger.active {
-    background-color: #ff8177;
-    border-color: #ff8177;
+    background-color: #2484bb;
+    border-color: #2484bb;
     color: white; }
 
   .blog-header {

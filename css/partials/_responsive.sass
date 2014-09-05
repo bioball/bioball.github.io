@@ -17,16 +17,16 @@
     display: block
     padding: 0.2em 0.5em
     border-radius: 4px
-    border: 1px solid lighten($lightPastelRed, 20%)
+    border: 1px solid lighten($blue, 20%)
     display: inline-block
     cursor: pointer
     position: absolute
     left: 14px
     top: 14px
-    color: $lightPastelRed
+    color: $blue
     +transition(150ms ease-out)
     &:hover
-      background-color: lighten($lightPastelRed, 20%)
+      background-color: lighten($blue, 20%)
   .index-header.active
     +transform(translate3d(230px, 0, 0))
   .fauxcolumn.active
@@ -34,8 +34,8 @@
   .post-listing.active
     +transform(translate3d(230px, 0, 0))
   .hamburger.active
-    background-color: $lightPastelRed
-    border-color: $lightPastelRed
+    background-color: $blue
+    border-color: $blue
     color: #fff
   .blog-header
     float: none
