@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700,800");
+@import url("//fonts.googleapis.com/css?family=Inconsolata:400,700");
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
@@ -47,8 +48,8 @@ hr {
   height: 0; }
 
 mark {
-  background: yellow;
-  color: black; }
+  background: #ff0;
+  color: #000; }
 
 code, kbd, pre, samp {
   font-family: monospace, serif;
@@ -58,7 +59,7 @@ pre {
   white-space: pre-wrap; }
 
 q {
-  quotes: "\201C" "\201D" "\2018" "\2019"; }
+  quotes: "“" "”" "‘" "’"; }
 
 small {
   font-size: 80%; }
@@ -89,7 +90,7 @@ figure {
   margin: 0; }
 
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -143,16 +144,6 @@ table {
   border-spacing: 0; }
 
 @font-face {
-  font-family: "Ayuthaya";
-  src: local("Ayuthaya"), url("/assets/fonts/Ayuthaya.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: "Ayuthaya";
-  src: local("Ayuthaya"), url("/assets/fonts/Ayuthaya.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
   font-family: "Tisa";
   src: local("Tisa"), url("/assets/fonts/Tisa.ttf") format("ttf");
   font-weight: 400;
@@ -168,7 +159,7 @@ html {
   height: 100%; }
 
 body {
-  color: #555555;
+  color: #555;
   font-weight: 400;
   background-size: 8px;
   width: 100%;
@@ -220,9 +211,9 @@ strong {
   padding: 1em; }
 
 a.index-blog-title-link {
-  color: #999999; }
+  color: #999; }
   a.index-blog-title-link:hover {
-    color: #444444; }
+    color: #444; }
 
 h1 {
   font-size: 2em; }
@@ -237,13 +228,13 @@ p {
 hr {
   border: 0;
   width: 100%;
-  border-top: 1px solid gainsboro;
+  border-top: 1px solid #dcdcdc;
   height: 1px;
   margin: 5em 0;
   text-align: center; }
   hr::after {
     content: "•";
-    color: gainsboro;
+    color: #dcdcdc;
     padding: 0.3em;
     display: inline-block;
     position: relative;
@@ -310,7 +301,7 @@ pre {
     padding: 0; }
 
 code {
-  font-family: "Ayuthaya";
+  font-family: Monaco, Inconsolata, Courier New, monospace;
   font-size: 0.8em;
   font-weight: 400;
   background-color: #efefef;
@@ -369,12 +360,12 @@ nav ul {
   padding: 0; }
 
 .header-link {
-  color: white; }
+  color: #fff; }
   .header-link:visited {
-    color: white; }
+    color: #fff; }
 
 .external-link::after {
-  content: " \f08e";
+  content: " ";
   font-family: "FontAwesome";
   display: inline-block;
   line-height: 1;
@@ -508,7 +499,7 @@ nav ul {
   .hamburger.active {
     background-color: #2484bb;
     border-color: #2484bb;
-    color: white; }
+    color: #fff; }
 
   .blog-header {
     float: none;
