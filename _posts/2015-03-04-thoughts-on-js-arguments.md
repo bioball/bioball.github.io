@@ -57,8 +57,9 @@ stomp = ({ cow, speed, delay }) ->
 ES6
 
 ```js
-var stomp = ({ cow, speed, delay }) =>
+var stomp = ({ cow, speed, delay }) => {
   return cow.stomp(speed, delay)
+}
 ```
 
 
