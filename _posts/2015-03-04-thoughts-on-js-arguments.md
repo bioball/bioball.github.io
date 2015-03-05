@@ -44,7 +44,7 @@ getCow()
 });
 ```
 
-This coding style annotates itself. Much easier to read than previously. There still is a problem, though. Defining these functions still suck. What used to be one line of code is now 5. If you're writing ES5 JavaScript, unfortunately there's no fix for this. However, with ES6 and CoffeeScript, you can do this kind of thing:
+This coding style annotates itself, and is much easier to read than using vanilla arguments. There still is a problem, though: defining these functions still suck. What used to be one line of code is now 5. If you're writing ES5 JavaScript, unfortunately there's no fix for this. However, with ES6 and CoffeeScript, you can do this kind of thing:
 
 
 CoffeeScript
@@ -64,6 +64,6 @@ var stomp = ({ cow, speed, delay }) => {
 
 Two negative side-effects of this approach:
 
-1. Any time you call a function, you're creating a new object in memory. It's slightly more expensive.
+1. Any time you call a function, you're creating a new object in memory, which is slightly more expensive.
 
 2. Error messages will be things like "Cannot read property cow of undefined" if an argument isn't passed in.
