@@ -12,7 +12,7 @@ var stomp = function(cow, speed, delay){
 };
 ```
 
-In a real application, the definition of this function is likely going to be in a completely separate file. When `stomp` is used, it'd be somewhere else completely:
+In a real application, the definition of this function is likely going to be in a completely separate file. And when you call your method, it would look something like this.
 
 ```js
 getCow()
@@ -23,7 +23,7 @@ getCow()
 
 When reading this, you'd have no idea what `300` or `0.5` are supposed to represent. And it won't be until you check the source code for `stomp` that you figure it out.
 
-I suggest writing functions this way:
+I'm thinking that functions should be written this way:
 
 ```js
 var stomp = function(args){
@@ -35,7 +35,7 @@ var stomp = function(args){
 }
 ```
 
-Thus, when you call it, it would look like so:
+Then when you call it, it would look like so:
 
 ```js
 getCow()
@@ -62,5 +62,8 @@ var stomp = ({ cow, speed, delay }) => {
 }
 ```
 
+Two negative side-effects of this approach:
 
+1. Any time you call a function, you're creating a new object in memory. It's slightly more expensive.
 
+2. Error messages will be things like "Cannot read property cow of undefined" if an argument isn't passed in.
