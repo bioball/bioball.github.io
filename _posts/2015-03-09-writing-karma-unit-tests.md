@@ -32,7 +32,7 @@ I write all my tests in CoffeeScript, even if my project is written in JavaScrip
 
 ### PhantomJS
 
-[PhantomJS](http://phantomjs.org/) is a headless browser that runs without opening any GUI. It runs on the V8 engine, so you can load all your application's JavaScript into it and test to ensure correctness. Outside of not having a GUI, it exposes all browser-level APIs to replicate a normal browser environment.
+[PhantomJS](http://phantomjs.org/) is a headless browser that runs without opening any GUI. It runs on the V8 engine, so you can load all your application's JavaScript into it and test to ensure correctness. Outside of not having a GUI, it exposes all browser-level APIs to replicate a normal browser environment. I use this to speed up my testing process, as PhantomJS is faster to spin up and spin down than an actual browser.
 
 # Directory Structure
 
@@ -60,7 +60,7 @@ And karma.conf.js looks like this
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['browserify', 'mocha', 'chai-things', 'chai', 'sinon', 'chai-as-promised'],
+    frameworks: ['browserify', 'mocha', 'chai-things', 'sinon-chai', 'chai-as-promised'],
     files: [
       'public/build/js/application.js',
       'node_modules/angular-mocks/angular-mocks.js',
@@ -79,12 +79,11 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: false,
     browserNoActivityTimeout: 60000,
-    browsers: ['PhantomJS', 'PhantomJS_custom'],
+    browsers: ['PhantomJS_custom'],
     customLaunchers: {
       'PhantomJS_custom': {
         base: 'PhantomJS',
         options: {
-          windowName: 'windowww',
           settings: {
             webSecurityEnabled: false
           }
@@ -96,7 +95,24 @@ module.exports = function(config) {
 };
 ```
 
-We want Karma to bundle our test files every time our tests are run, and serve them to the browser.
+Couple of things to point out here:
+
+1.  I've added a bunch of plugins into Karma to help with testing. They'll need to be installed with NPM. The packages are: 
+    * [karma-browserify](https://www.npmjs.com/package/karma-browserify)
+    * [karma-mocha](https://www.npmjs.com/package/karma-mocha)
+    * [karma-chai-things](https://www.npmjs.com/package/karma-chai-things)
+    * [karma-sinon-chai](https://www.npmjs.com/package/karma-sinon-chai)
+    * [karma-chai-as-promised](https://www.npmjs.com/package/karma-chai-as-promised)
+
+2.  I've set `singleRun` to true, which means Karma will boot up, run all my unit tests, then close down again.
+3.  I'm using `PhantomJS_custom` as my browser. I'm actually not sure if this is necessary. It's also an npm package: [karma-phantomjs-launcher](https://www.npmjs.com/package/karma-phantomjs-launcher)
+4.  I'm using the Mocha reporter. It looks pretty.
+
+We want Karma to bundle our test files every time our tests are run, and serve them to the browser. To run tests, run this command:
+
+```bash
+karma start
+```
 
 
 # Testing Controllers

@@ -5,10 +5,6 @@ cssMin = require "gulp-minify-css"
 
 gulp.task "sass", ->
   sass("./css/main.sass")
-  .pipe gulp.dest("./css/")
-
-gulp.task "sass:min", ->
-  sass("./css/main.sass")
   .pipe cssMin()
   .pipe gulp.dest("./css/")
 
