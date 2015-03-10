@@ -140,6 +140,8 @@ describe 'Potato Controller', ->
 
 `inject` is a special function that provides dependency injection, just like how dependency injection works in Angular controllers and services. It either returns your working function with your services bound to it, or invokes your working function with the services, depending on what environment it's declared in. 
 
+> `module` and `angular.module.module` are aliases, and so are `inject` and `angular.mock.inject`. However, in my tests, the `module` variable is overwritten by Browserify.
+
 
 ```coffee
 
@@ -152,7 +154,7 @@ beforeEach inject ($rootScope) ->
 
 ```
 
-We defined a `@createController` function in our `beforeEach` method, because sometimes we want to test the behavior of the controller depending on what was injected into the controller. Also, notice that the @createController method accepts optional arguments to be injected into the controller, so we can easily change what the controller the contents of the controller's dependencies.
+We defined a `@createController` function in our `beforeEach` method, because sometimes we want to test the behavior of the controller depending on what was injected into the controller. Also, notice that the `@createController` method accepts optional arguments to be injected into the controller, so we can easily change what the controller the contents of the controller's dependencies.
 
 
 ```coffee
