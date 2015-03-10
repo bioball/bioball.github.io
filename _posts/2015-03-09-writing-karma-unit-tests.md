@@ -4,6 +4,8 @@ title: Writing Karma unit tests
 date: 2015-03-09
 ---
 
+> DISCLAIMER: All the examples in this blog post are written in CoffeeScript.
+
 I've written some pretty terrible unit tests in my days, and through trial and error, I've slowly improved the way I write unit tests for what I do. I haven't really found a good, comprehensive blog post anywhere that guides you on how to write Karma unit tests for an Angular app, so I thought I'd try and fill the void.
 
 The base libraries that I always use with my unit tests are Mocha, Sinon, Chai, Browserify, CoffeeScript and PhantomJS. I've found that these best suit my needs and are easiest to work with and debug.
