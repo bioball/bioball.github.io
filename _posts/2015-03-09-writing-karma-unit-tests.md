@@ -122,11 +122,15 @@ describe 'Potato Controller', ->
   
   beforeEach angular.mock.module 'barn'
 
+  # Using @ in the paramter position is shorthand for assigning it to self. It's equivalent to this:
+  # (User) ->
+  #   @User = User
+
   beforeEach inject (@$rootScope, @User, $controller) ->
     @$scope = @$rootScope.$new()
-    @createController = (props = {}) ->
+    @createController = (props = {}) =>
       props.$scope ||= @$scope
-      props.user ||= new User(users[0])
+      props.user ||= new @User(users[0])
       $controller('PotatoController', props)
 ```
 
@@ -158,7 +162,7 @@ describe 'Potato Controller', ->
 
   beforeEach inject (@$rootScope, @User, $controller) ->
     @$scope = @$rootScope.$new()
-    @createController = (props = {}) ->
+    @createController = (props = {}) =>
       props.$scope ||= @$scope
       props.user ||= new User(users[0])
       $controller('PotatoController', props)
@@ -317,6 +321,8 @@ angular.module('barn')
 # cowServiceSpec.coffee
 
 describe 'cowService', ->
+
+  beforeEach angular.mock.module "barn"
   
   beforeEach inject (@$httpBackend, @cowService) ->
 
