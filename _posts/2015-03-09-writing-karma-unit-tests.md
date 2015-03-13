@@ -184,7 +184,7 @@ describe 'Potato Controller', ->
     @$scope = @$rootScope.$new()
     @createController = (props = {}) =>
       props.$scope ||= @$scope
-      props.user ||= new User(users[0])
+      props.user ||= new @User(users[0])
       $controller('PotatoController', props)
 
   describe 'it has these methods', ->
@@ -193,22 +193,22 @@ describe 'Potato Controller', ->
 
   describe 'feeding', ->
 
-    beforeEach inject (User) ->
-      sinon.spy(User.prototype, 'feed')
+    beforeEach ->
+      sinon.spy(@User.prototype, 'feed')
 
-    afterEach inject (User) ->
-      User.prototype.feed.restore()
+    afterEach ->
+      @User.prototype.feed.restore()
 
-    it 'feeds the user if it is not full', inject (User) ->
+    it 'feeds the user if it is not full', ->
       # let's assume users[2] is an object that describes a user that isn't full
-      user = new User(users[2])
+      user = new @User(users[2])
       ctrl = @createController({ user })
       ctrl.feedPotatoes()
-      expect(User.prototype.feed).to.have.been.called
-      expect(User.prototype.feed).to.have.been.calledWith('potatoes')
+      expect(@User.prototype.feed).to.have.been.called
+      expect(@User.prototype.feed).to.have.been.calledWith('potatoes')
 
-    it 'does not feed the user if it is full', inject (User) ->
-      user = new User(users[2])
+    it 'does not feed the user if it is full', ->
+      user = new @User(users[2])
       ctrl = @createController({ user })
       ctrl.feedPotatoes()
       expect(User.prototype.feed).to.not.been.called

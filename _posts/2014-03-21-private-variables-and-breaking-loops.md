@@ -85,6 +85,7 @@ this.set = function(attr, value){
 
 So is doing this any better than just defining variables as properties of each instance of the class? That's up to you to decide.
 
+> EDIT: It's been a year since I wrote this blog post, and I have never used this pattern. It just hasn't been very important that I make variables truly private.
 
 ## Breaking out of `each` loops
 
