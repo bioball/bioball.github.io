@@ -355,6 +355,7 @@ describe 'cowService', ->
 
       # this is an expectation. It will throw an error if it is not met.
       @$httpBackend.expectPOST("/api/cows/eat")
+      .respond(200, amount: 300)
       @cowService.eat('grass')
       @$httpBackend.flush()
 
@@ -363,10 +364,13 @@ describe 'cowService', ->
       # the anonymous function passed in as the second parameter is another assertion I can make. Return true to pass, return false to fail.
       # It receives the body of my request, and if it is JSON, it's passed in object format.
       @$httpBackend.expectPOST("/api/cows/eat", (body) -> body.type is "grass")
+      .respond(200, amount: 300)
       @cowService.eat('grass')
       @$httpBackend.flush()
 
 ```
+
+**IMPORTANT**: you must specify a response when declaring an http expectation, otherwise you will get an error that there were no pending requests to flush.
 
 With the $httpBackend, you can write expectations on the requests that your app makes to the serve by using their `$httpBackend.expect<VERB>` API. You can also change your mock backend's responses like so:
 
