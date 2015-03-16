@@ -370,9 +370,9 @@ describe 'cowService', ->
 
 ```
 
-**IMPORTANT**: you must specify a response when declaring an http expectation, otherwise you will get an error that there were no pending requests to flush.
+**IMPORTANT**: you must specify a response when declaring an http expectation, otherwise you will get an error that there were no pending requests to flush. So you must chain `.respond` any time you declare `expect<VERB>`.
 
-With the $httpBackend, you can write expectations on the requests that your app makes to the serve by using their `$httpBackend.expect<VERB>` API. You can also change your mock backend's responses like so:
+With the `$httpBackend`, you can write expectations on the requests that your app makes to the serve by using their `$httpBackend.expect<VERB>` API. You can also change your mock backend's responses like so:
 
 ```coffee
 beforeEach inject (@$httpBackend, @cowService) ->
