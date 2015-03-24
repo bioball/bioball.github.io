@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Writing Karma unit tests
+title: Writing Angular unit tests with Karma
 date: 2015-03-09
 ---
 
