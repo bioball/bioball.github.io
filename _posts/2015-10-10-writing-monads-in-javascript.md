@@ -8,9 +8,9 @@ I've recently started exploring what monads could look like in JavaScript. If yo
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/ZhuHCtR3xq8" frameborder="0" allowfullscreen></iframe>
 
-In short, a monad is a wrapper around a value that may have some unintended consequences, in order to perform composable, safe operations. Monads are constructs from functional programming, and are used everywhere in functional langauges. It's about damn time that we start taking monads seriously in JavaScript as well.
+In short, a monad is a wrapper around a value that may have some unintended consequences, in order to perform composable, safe operations. monads are constructs from functional programming, and are used everywhere in functional langauges. It's about damn time that we start taking monads seriously in JavaScript as well.
 
-I've taken a great deal of inspiration from Scala in my approach to Monads in JavaScript. This started out as purely an expirement, but the more I work with these ideas, the more excited I am. I believe monads are perfectly feasible, and should be used in JavaScript. Some of the benefits of Monads is they eliminate the need for a `null` value, and the need to throw errors.
+I've taken a great deal of inspiration from Scala in my approach to monads in JavaScript. This started out as purely an expirement, but the more I work with these ideas, the more excited I am. I believe monads are perfectly feasible, and should be used in JavaScript. Some of the benefits of monads is they eliminate the need for a `null` value, and the need to throw errors.
 
 ## Faux-pattern matching
 
@@ -31,7 +31,7 @@ foo().match({
   None () { ... }
 })
 ```
-The drawbacks are the lack of compile-time syntax and type checks. However, it does make using Options more practical. In the same vein, here's faux-pattern matching for an Either.
+The drawbacks are the lack of compile-time syntax and type checks. However, it does make using `Options` more practical. In the same vein, here's faux-pattern matching for an `Either`.
 
 ```js
 foo().match({
@@ -42,7 +42,7 @@ foo().match({
 
 ## Parsers and Serializers
 
-I think things like Option types are totally useless unless there's an easy way to interop with vanilla JS objects. There needs to be some repeatable way to serialize and deserialize to monadic values. For example:
+I think things like `Option` are totally useless unless there's an easy way to interop with vanilla JS objects. There needs to be some repeatable way to serialize and deserialize to monadic values. For example:
 
 ```json
 {
