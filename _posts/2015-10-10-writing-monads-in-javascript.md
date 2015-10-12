@@ -55,7 +55,7 @@ Should serialize into:
 
 ```js
 {
-  "foo": Some("bar"),
+  "foo": Some("bar"), // or just "bar" if we expect this value to always exits.
   "biz": None()
 }
 ```
@@ -64,21 +64,17 @@ To that endeavor, my ideas is to create parsers based off of `Reads` objects. Th
 
 ```js
 const definition = M.define({
-  "foo": M.string,
-  "bar": M.define({
-    "baz": Option.as(M.string)
-  })
+  "foo": Option.as(M.string),
+  "biz": Option.as(M.string)
 });
 
 definition.parse({
-  foo: "bar",
-  bar: {
-    baz: null
-  }  
-}).map((parsed) => ...); // here, parsed is { foo: "bar", bar: { baz: None() }}
+  "foo": "bar",
+  "biz": null
+}).map((parsed) => ...); // parsed is now { "foo": Some(bar), "biz": None() }
 ```
 
-In this example, the object passed to `M.define` is an object of key-`Reads` pairs. The return value of `M.define` is a reads itself, so this can be freely nested. `M` is just a placeholder name until I figure out what to call this library of mine.
+In this example, the object passed to `M.define` is an object of key-`Reads` pairs. The return value of `M.define` is a `Reads` itself, so this can be freely nested. `M` is just a placeholder name until I figure out what to call this library of mine.
 
 For some real world examples, here's a potential way to implement it in Angular
 
@@ -111,3 +107,8 @@ module.factory("User", function($http){
 ```
 
 [Here is](https://github.com/bioball/monadia) the repository I'm currently working off of to explore all these ideas. Feel free to check out the source code, and offer suggestions. I'm quite excited about it.
+
+One more thing: a JavaScript `Promise` is a monad-like type for future operations. It doesn't fully behave like a monad, because you cannot have a `Promise<Promise>`. However, it takes almost the same approach as a monad. Some further reading/watching:
+
+  * [James Coglan: Promises are the monad of asynchronous programming](https://blog.jcoglan.com/2011/03/11/promises-are-the-monad-of-asynchronous-programming/)
+  * [Douglas Crockford: Monads and Gonads](https://www.youtube.com/watch?v=b0EF0VTs9Dc)
