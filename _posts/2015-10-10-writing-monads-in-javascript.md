@@ -10,7 +10,7 @@ I've recently started exploring what monads could look like in JavaScript. If yo
 
 In short, a monad is a wrapper around a value that may have some unintended consequences, in order to perform composable, safe operations. Monads are constructs from functional programming, and are used everywhere in functional langauges. It's about damn time that we start taking monads seriously in JavaScript as well.
 
-I've taken a great deal of inspiration from Scala in my approach to Monads in JavaScript. This started out as purely an expirement, but the more I work with these ideas, the more excited I am. I beleive monads are perfectly feasible, and should be used in JavaScript. Some of the benefits of Monads is they eliminate the need for a `null` value, and the need to throw errors.
+I've taken a great deal of inspiration from Scala in my approach to Monads in JavaScript. This started out as purely an expirement, but the more I work with these ideas, the more excited I am. I believe monads are perfectly feasible, and should be used in JavaScript. Some of the benefits of Monads is they eliminate the need for a `null` value, and the need to throw errors.
 
 ## Faux-pattern matching
 
