@@ -20,26 +20,36 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
   <![endif]-->
   <body>
+
+    {% include nav.html %}
+    
     <header class="blog-header">
-      <div class="blog-title-container">
-        <div class="blog-title">
+      <div class="container">
+        <h1 class="blog-title">
           {{ page.title }}
-        </div>
+        </h1>
+        <p class="blog-date">{{ page.date | date_to_string }}</p>
       </div>
-      <a href="/" class="nav-back-arrow"><i class="fa fa-arrow-left"></i> home</a>
     </header>
     <div class="post-container">
       <div class="container">
 
         <div class="post">
-          <p class="blog-date">{{ page.date | date_to_string }}</p>
           {{ content }}
         </div>
 
-        <!-- {% include scripts.html %} -->
+        {% include scripts.html %}
         <!-- {% include responsive.html %} -->
         {% include disqus.html %}
       </div>
     </div>
+    <script>
+    $(function(){
+      $('.post-container').fitVids();
+    });
+    </script>
+
+    {% include nav.html %}
+
   </body>
 </html>

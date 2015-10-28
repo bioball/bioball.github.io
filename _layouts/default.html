@@ -22,7 +22,14 @@
 
   </head>
   <body>
-    {% include header.html %}
+    {% include nav.html %}
+
+    <header class="site-header">
+      <div class="container">
+        <h1>dan's blog</h1>
+        <p class="about-me">Why, hello there. I am a software engineer at <a href="https://www.makewonder.com/" target="_blank">Wonder Workshop</a>, a JavaScript enthusiast, and a San Francisco dweller.</p>
+      </div>
+    </header>
 
     <div class="post-listing">
       <div class="hamburger"><i class="fa fa-bars"></i></div>
@@ -36,9 +43,10 @@
           
       </div>
     </div>
+    
+    {% include nav.html %}
 
     {% include scripts.html %}
-    {% include responsive.html %}
 
   </body>
 </html>

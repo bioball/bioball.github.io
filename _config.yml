@@ -1,9 +1,10 @@
-name:      Dan Chao | dchao.co
-url:       http://dchao.co/
-markdown:  redcarpet
-permalink: pretty
-paginate:  8
+name:         Dan Chao | dchao.co
+description:  dan's blog
+url:          http://dchao.co/
+markdown:     redcarpet
+permalink:    pretty
+paginate:     8
 links:
-  - name:  About
-    url:   /about
+  - name:     About
+    url:      /about
 # gems: [activesupport]

@@ -3,57 +3,66 @@
   font-size: 0.7em
   font-weight: 200
   margin-bottom: 0.7em
+  line-height: 1
 
-.blog-header
-  height: 350px
-  background-image: url("/assets/grey_@2X.png")
-  margin-bottom: 0
-  font-size: 1.2em
-  padding-bottom: 0
-  // position: absolute
-  width: 330px
-  margin-left: 5%
-  float: left
+// .blog-header
+//   height: 350px
+//   margin-bottom: 0
+//   font-size: 1.2em
+//   padding-bottom: 0
+//   // position: absolute
+//   width: 330px
+//   margin-left: 5%
+//   float: left
 
-.blog-title
-  position: absolute
-  font-size: 1.8em
-  font-family: "Tisa"
-  // letter-spacing: -1px
-  color: $blue
-  line-height: 1.1
-  margin: 0 auto
-  font-weight: normal
-  bottom: 0
-  padding: 0.5em
+// .blog-title
+//   position: absolute
+//   font-size: 1.8em
+//   font-family: "Tisa"
+//   // letter-spacing: -1px
+//   color: $blue
+//   line-height: 1.1
+//   margin: 0 auto
+//   font-weight: normal
+//   bottom: 0
+//   padding: 0.5em
 
-.blog-title-container
-  max-width: 650px
-  margin: 0 auto
-  position: relative
-  height: 100%
+// .blog-title-container
+//   max-width: 650px
+//   margin: 0 auto
+//   position: relative
+//   height: 100%
 
-.nav-back-arrow
-  font-size: 15px
-  display: block
-  margin-top: 18px
-  text-align: center
-  position: absolute
-  top: 0
-  left: 15px
-  @media(min-width: 900px)
-    position: static
+// .nav-back-arrow
+//   font-size: 15px
+//   display: block
+//   margin-top: 18px
+//   text-align: center
+//   position: absolute
+//   top: 0
+//   left: 15px
+//   @media(min-width: 900px)
+//     position: static
+
+header.blog-header
+  h1
+    line-height: 1.3
+    margin-bottom: 0
+    margin-top: 1em
+    color: #333
+    font-size: 2.3em
+    font-weight: 500
+
+.post
+  margin-bottom: 2em
 
 .post img
   max-width: 100%
 
 .post-container
-  padding-top: $sitePaddingTop
-  // box-shadow: 0 0 5px rgba(200, 200, 200, 0.7)
   position: relative
   z-index: 10
   overflow: hidden
-  // margin: 0 auto
 
 .image-scrim
   background-color: rgba(30, 30, 30, 0.8)

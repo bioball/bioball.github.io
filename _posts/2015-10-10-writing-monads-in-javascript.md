@@ -6,7 +6,9 @@ date: 2015-10-10
 
 I've recently started exploring what monads could look like in JavaScript. If you don't know what a monad is, [here is](https://www.youtube.com/watch?v=ZhuHCtR3xq8) one of my favorite videos on the topic. (Beware, it's an hour long video. And you will have to spend a little bit of time digesting his information.)
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/ZhuHCtR3xq8" frameborder="0" allowfullscreen></iframe>
+<div class="video-wrapper" style="margin-bottom: 1em;">
+  <iframe width="640" height="480" src="https://www.youtube.com/embed/ZhuHCtR3xq8" frameborder="0" allowfullscreen></iframe>
+</div>
 
 In short, a monad is a wrapper around a value that may have some unintended consequences, in order to perform composable, safe operations. monads are constructs from functional programming, and are used everywhere in functional langauges. It's about damn time that we start taking monads seriously in JavaScript as well.
 
@@ -92,13 +94,20 @@ module.factory("User", function($http){
   });
 
   /**
-   * This would return a Promise<Left<Error>>, or a Promise<Right<User>>
+   * This would return a Promise<User>
    */
   User.find = function(id){
     return $http.get(`/users/${ id }`).then(({ data }) => {
       return definition
       .parse(data)
       .map((parsed) => new User(parsed))
+      .toPromise();
+    })
+    .then(function(user){
+      // here, a user is instantiated
+    })
+    .catch(function(err){
+      // here, err might be a parsing error.
     });
   };
 

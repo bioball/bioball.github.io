@@ -64,4 +64,4 @@ So what did my team and I build during our time there? Click below to play! I'd 
 
 
 
-<a name="walkthrough" class="not-link"><iframe width="100%" height="500" src="//www.youtube.com/embed/HMyJS46H7b0" frameborder="0" allowfullscreen></iframe></a>
+<a name="walkthrough" class="not-link"><iframe width="300" height="400" src="//www.youtube.com/embed/HMyJS46H7b0" frameborder="0" allowfullscreen></iframe></a>
