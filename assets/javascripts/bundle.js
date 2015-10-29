@@ -44,7 +44,7 @@ $(function () {
         return t === theme ? new None() : new _Some(theme);
       },
       None: function None() {
-        return _Some(theme);
+        return new _Some(theme);
       }
     }).map(function (newTheme) {
       currentTheme.map(removeTheme);

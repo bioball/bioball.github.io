@@ -37,7 +37,7 @@ $(function(){
     currentTheme
     .match({
       Some (t) { return t === theme ? new None : new Some(theme); },
-      None () { return Some(theme); }
+      None () { return new Some(theme); }
     })
     .map((newTheme) => {
       currentTheme.map(removeTheme);
