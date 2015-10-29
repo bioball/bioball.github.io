@@ -1,0 +1,176 @@
+// Default
+
+body
+  background-color: #fff
+  color: $body-font-color
+
+a
+  color: $body-link-color
+  &:visited
+    color: $body-link-color
+  &:hover
+    color: darken($body-link-color, 15%)
+
+
+a.not-link
+  color: $body-font-color
+  &:hover
+    color: $body-font-color
+
+h1, h2, h3, h4, h5, h6
+  color: $body-header-color
+
+.index-blog-title
+  a
+    color: $body-font-color
+    &:hover
+      color: $body-link-color
+
+.blog-date
+  color: $lightGrey
+
+blockquote p
+  border-color: #2e333b
+
+header.blog-header
+  h1
+    color: #333
+
+hr
+  border-color: #dcdcdc
+  &::after
+    color: #dcdcdc
+    background-color: #fff
+
+.theme-picker
+  border-color: #eee
+  button
+    border-right-color: #eee
+    color: #bdbdbd
+    &.active
+      background-color: $solarized-green !important
+      color: #eee
+    &:focus
+      background-color: #eee
+    &:active
+      background-color: #eee
+
+// Solarized light
+
+body.light
+  background-color: $solarized-base3
+  color: $solarized-base00
+
+  a
+    color: $solarized-red
+    &:visited
+      color: $solarized-red
+    &:hover
+      color: darken($solarized-red, 15%)
+
+  a.not-link
+    color: $solarized-base00
+    &:hover
+      color: $solarized-base00
+
+  h1, h2, h3, h4, h5, h6
+    color: $solarized-base01
+
+  code, pre
+    background-color: $solarized-base2
+
+
+  .index-blog-title
+    a
+      color: $solarized-base01
+      &:hover
+        color: $solarized-red
+
+  .blog-date
+    color: $solarized-base1
+
+  header.blog-header h1
+    color: $solarized-base01
+
+  blockquote p
+    border-color: $solarized-violet
+
+  hr
+    border-color: $solarized-base1
+    &::after
+      color: $solarized-base1
+      background-color: $solarized-base3
+
+
+  .theme-picker
+    border-color: $solarized-base2
+    button
+      border-right-color: $solarized-base2
+      color: $solarized-base1
+      &:hover
+        color: $solarized-base0
+      &:focus
+        background-color: $solarized-base01
+      &:active
+        background-color: $solarized-base01
+      &.active
+        color: $solarized-base2 !important
+
+body.dark
+  background-color: $solarized-base03
+  color: $solarized-base0
+
+  a
+    color: $solarized-cyan
+    &:visited
+      color: $solarized-cyan
+    &:hover
+      color: darken($solarized-cyan, 15%)
+
+  a.not-link
+    color: $solarized-base0
+    &:hover
+      color: $solarized-base0
+
+  h1, h2, h3, h4, h5, h6
+    color: $solarized-base1
+
+  code, pre
+    background-color: $solarized-base02
+
+
+  .index-blog-title
+    a
+      color: $solarized-base1
+      &:hover
+        color: $solarized-cyan
+
+  .blog-date
+    color: $solarized-base01
+
+  header.blog-header h1
+    color: $solarized-base1
+
+  blockquote p
+    border-color: $solarized-green
+
+
+  hr
+    border-color: $solarized-base01
+    &::after
+      color: $solarized-base01
+      background-color: $solarized-base03
+
+  .theme-picker
+    border-color: $solarized-base02
+    button
+      border-right-color: $solarized-base02
+      color: $solarized-base01
+      &:hover
+        color: $solarized-base00
+      &:focus
+        background-color: $solarized-base02
+      &:active
+        background-color: $solarized-base02
+      &.active
+        color: $solarized-base02 !important
