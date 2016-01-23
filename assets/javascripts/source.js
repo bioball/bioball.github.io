@@ -29,7 +29,7 @@ $(function(){
   };
 
   currentTheme.map(applyTheme);
-
+  
   $('.theme-picker button').click(function(e){
     e.preventDefault();
     // theme is either dark, light or default.
